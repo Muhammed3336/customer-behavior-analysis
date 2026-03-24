@@ -59,7 +59,7 @@ The analysis includes data cleaning, exploratory data analysis (EDA), KPI genera
 
 - 📊 [Data Analysis Notebook](Data_Analysis.ipynb)  
 - 📈 [Customer Behavior & Business Insights Report](Customer_Behaviour_Analysis_&_Business_Insights_Report)  
-- 📉 [KPI Analysis Report](KPIs_and_Customer_Behavior_Analysis_And_Insights)  
+- 📉 [KPI Analysis Report](KPIs_and_Customer_Behavior_Analysis_And_Insights.pbix)  
 - 🧾 [Python Code Walkthrough](Python_Code_Walkthrough_and_Implementation_Steps)  
 
 > ⚠️ Power BI Dashboard (.pbix) file is not included in preview. Download and open using Power BI Desktop to view.
