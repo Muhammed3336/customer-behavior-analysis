@@ -1,0 +1,75 @@
+                     Python Code Walkthrough and Implementation Steps
+
+
+Data Inspection, Cleaning, and Feature Engineering
+1. Data Inspection
+The first step in any data analysis process is to inspect the dataset thoroughly. In this phase, we focused on understanding the structure of the dataset and identifying any potential issues that could affect the analysis. The key tasks during this phase included:
+  •	Checking Dataset Shape: We started by reviewing the number of rows (records) and columns (variables) in the dataset to ensure it was as expected.
+  •	Reviewing Column Names: The column names were examined to ensure they matched the expected structure and to identify any inconsistencies.
+  •	Identifying Missing Values: We checked for missing data across all columns to understand which fields had incomplete records.
+  •	Checking for Duplicates: Duplicate rows were identified and removed to avoid redundant analysis.
+  •	Inspecting Data Types: We checked the data types of each column (e.g., numerical, categorical, datetime) to ensure they were correctly formatted for analysis.
+
+2. Data Cleaning
+Data cleaning is an essential step to ensure that the dataset is ready for in-depth analysis. In this phase, we focused on handling missing values, data type conversion, and duplicates:
+  •	Handling Missing Values: We detected columns with missing values, particularly the Gender column, and imputed missing values using the mode (most frequent value) for categorical fields.
+  •	Date Formatting: The Purchase Date column was converted to datetime format to enable time-based analysis such as month, quarter, and year extractions.
+  •	Removing Duplicates: Any duplicate rows in the dataset were removed to prevent redundant analysis and ensure clean data for modelling.
+  •	Validating Data Integrity: After cleaning, we validated the dataset again to ensure there were no missing values or errors in the critical columns such as Revenue, Customer ID, and Order Status.
+
+3. Feature Engineering
+Feature engineering transforms raw data into meaningful features that can be used for analysis and modelling. In this phase, we created several new features to enhance the dataset and provide deeper insights:
+  •	Month, Quarter, and Year Extraction: We extracted Month, Quarter, and Year from the Purchase Date column to allow for time-based analysis and to understand trends over time.
+  •	Revenue Calculation: A new Revenue column was created by multiplying the Quantity and Unit Price (or using the Total Price if it was already present) to ensure accurate revenue reporting.
+  •	Customer Segmentation:
+  o	Total Spend by Customer: We aggregated the data by Customer ID to calculate the total spend by each customer, helping identify high-value customers.
+  o	Purchase Frequency by Customer: We calculated the purchase frequency for each customer to understand how often they made purchases.
+  •	Age Grouping: We created age groups (e.g., 18-25, 26-35, etc.) to segment customers into meaningful categories, which can help identify target demographics.
+  By performing these data inspection, cleaning, and feature engineering steps, we ensured that the dataset was ready for in-depth exploratory data analysis (EDA) and further advanced analysis.
+________________________________________
+Summary of Cleaning & Feature Engineering Steps:
+  •	Inspection: Checked dataset dimensions, missing values, duplicates, and data types.
+  •	Cleaning: Handled missing data, removed duplicates, and formatted dates correctly.
+  •	Feature Engineering: Created new time-based features (Month, Quarter, Year) and calculated Revenue and customer-related metrics (total spend, purchase frequency).
+
+Exploratory Data Analysis (EDA)
+In the EDA phase, we aimed to understand the dataset's structure, identify patterns, and uncover relationships between variables. Key steps included:
+1.	Dataset Overview: Checked the shape, columns, and data types to ensure the dataset was structured correctly.
+2.	Missing Data: Identified and handled missing values to prevent any distortions in analysis.
+3.	Duplicates: Checked for and removed any duplicate rows to ensure data accuracy.
+4.	Summary Statistics: Reviewed summary statistics (mean, median, etc.) of numerical columns to identify trends and outliers.
+5.	Correlation Analysis: Assessed correlations between numerical variables to identify relationships.
+6.	Categorical Data Exploration: Explored the distribution of categorical features (e.g., Age Group, Gender, Payment Method).
+7.	Revenue Breakdown:
+  o	Analysed revenue by month to spot seasonal trends.
+  o	Explored revenue by age group and payment method to identify key drivers of revenue.
+8.	Outlier Detection: Identified and assessed outliers to ensure data quality.
+Key Insights:
+  •	Discovered seasonal revenue patterns and variations.
+  •	Identified significant age groups and payment methods driving revenue.
+  •	Cleaned data for further analysis.
+
+Behavioural Analysis
+In the Behavioural Analysis phase, we aimed to understand customer behaviour by segmenting customers, analysing their purchase patterns, and identifying trends. The key aspects considered include:
+1.	Customer Segmentation:
+  o	We segmented customers into Top 20% (high spenders) and Bottom 20% (low spenders) based on their total spend.
+  o	Further segmentation identified high spenders with low frequency (top spenders but low purchase frequency) and frequent buyers with low spend (frequent buyers but lower spend).
+
+2.	Repeat vs New Customers:
+  o	We identified repeat customers (those with more than one purchase) and calculated their percentage in the dataset.
+  o	We also determined the average purchase frequency of repeat customers, helping understand customer loyalty and retention.
+
+3.	Trend Analysis:
+  o	Monthly Revenue Growth: We calculated the month-over-month growth in revenue to identify peak periods and seasonal patterns.
+  o	Peak Month: We identified the month with the highest revenue, highlighting the period with the most customer activity.
+  o	Seasonal Spikes: We analysed months with significant growth (e.g., greater than 10%) to spot seasonal surges in customer behaviour.
+
+4.	Additional Analysis:
+  o	We explored revenue by quarter and age group for each year to identify which age groups and quarters generated the most revenue.
+  o	We also analysed which age group generated the most revenue quarter-wise for each year, identifying high-value segments across different time periods.
+
+Logic Behind the Analysis:
+  •	Customer Segmentation helped in targeting high-value customers for retention strategies and identifying low-frequency high-spenders for potential upselling.
+  •	Repeat vs New Customers provided insights into customer loyalty and helped gauge the effectiveness of marketing strategies.
+  •	Trend Analysis and Seasonal Spikes helped identify seasonal trends, informing inventory management, marketing campaigns, and sales strategies
+
